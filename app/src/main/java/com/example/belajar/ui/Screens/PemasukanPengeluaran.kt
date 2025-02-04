@@ -80,7 +80,7 @@ fun PemasukanPengeluaran(){
                             fontFamily = JakartaSansReguler,
                             lineHeight = 1.sp
                         )
-                        Spacer(modifier = Modifier.height(0.dp)) // Jarak antar teks horizontal
+                        Spacer(modifier = Modifier.height(0.dp))
                         Text(
                             "Jl Flora Medium",
                             fontSize = 13.sp,

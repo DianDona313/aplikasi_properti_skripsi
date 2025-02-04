@@ -59,7 +59,7 @@ fun SearchBar() {
                                 expanded = false
                             }
                             .fillMaxWidth()
-                            .padding(horizontal = 16.dp, vertical = 4.dp)
+                            .padding(horizontal = 25.dp, vertical = 15.dp)
                     )
                 }
             }
