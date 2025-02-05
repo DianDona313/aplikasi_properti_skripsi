@@ -1,11 +1,9 @@
-package com.example.belajar.ui.Screens
+package com.example.belajar.ui.Screens.Components
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Search
@@ -30,7 +28,9 @@ fun SearchBar() {
     var expanded by rememberSaveable { mutableStateOf(false) }
 
     Box(
-        modifier = Modifier.fillMaxWidth()
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(0.dp)
             .semantics { isTraversalGroup = true }
     ) {
         SearchBar(
@@ -45,6 +45,17 @@ fun SearchBar() {
             modifier = Modifier
                 .align(Alignment.TopCenter)
                 .semantics { traversalIndex = 0f }
+                .fillMaxWidth()
+                .height(34.dp),
+            colors = SearchBarDefaults.colors(
+                containerColor = Color(0xFFFFFFFF), // Ubah warna latar belakang
+                dividerColor = Color.Transparent,
+                inputFieldColors = TextFieldDefaults.colors(
+                    focusedIndicatorColor = Color.Transparent,
+                    unfocusedIndicatorColor = Color.Transparent,
+                    cursorColor = Color.Black
+                )
+            )
         ) {
             Column(Modifier.verticalScroll(rememberScrollState())) {
                 repeat(4) { idx ->
@@ -82,8 +93,9 @@ fun SearchBar() {
 //        }
     }
 }
+
 @Composable
 @Preview
-fun SearchBarPreview (){
+fun SearchBarPreview() {
     SearchBar()
 }

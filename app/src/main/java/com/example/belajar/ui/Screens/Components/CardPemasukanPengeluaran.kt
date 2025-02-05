@@ -1,4 +1,4 @@
-package com.example.belajar.ui.Screens
+package com.example.belajar.ui.Screens.Components
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
@@ -25,15 +25,15 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.belajar.R
+import com.example.belajar.ui.Screens.JakartaSansReguler
 
 @Composable
-fun PemasukanPengeluaran(){
+fun CardPemasukanPengeluaran(){
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -137,6 +137,6 @@ fun PemasukanPengeluaran(){
 }
 @Preview
 @Composable
-fun PemasukanPengeluaranPreview(){
-    PemasukanPengeluaran()
+fun CardPemasukanPengeluaranPreview(){
+    CardPemasukanPengeluaran()
 }

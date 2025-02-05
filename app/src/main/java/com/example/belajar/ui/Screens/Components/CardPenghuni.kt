@@ -1,4 +1,4 @@
-package com.example.belajar.ui.Screens
+package com.example.belajar.ui.Screens.Components
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
@@ -26,6 +26,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.belajar.R
+import com.example.belajar.ui.Screens.JakartaSansReguler
 
 @Composable
 fun CardPenghuni (){

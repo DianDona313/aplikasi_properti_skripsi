@@ -14,6 +14,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.belajar.R
+import com.example.belajar.ui.Screens.Components.PropertyRanking
+
 @Composable
 fun ScreenRanking(){
     Row(

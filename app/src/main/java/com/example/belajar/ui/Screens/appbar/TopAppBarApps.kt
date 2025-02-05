@@ -17,6 +17,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.belajar.ui.Screens.JakartaSansBold
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -31,6 +32,7 @@ fun TopAppBarApps(
                 color = Color(0xFFFF9800),
                 fontSize = 18.sp,
                 fontWeight = FontWeight.Bold,
+                fontFamily = JakartaSansBold,
                 modifier = Modifier.fillMaxWidth(),
                 textAlign = TextAlign.Center
             )

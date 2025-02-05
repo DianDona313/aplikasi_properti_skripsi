@@ -1,4 +1,4 @@
-package com.example.belajar.ui.Screens
+package com.example.belajar.ui.Screens.Screens
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -6,7 +6,6 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -25,12 +24,15 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.belajar.R
+import com.example.belajar.ui.Screens.Components.AktivitasUang
+import com.example.belajar.ui.Screens.JakartaSansBold
+import com.example.belajar.ui.Screens.Components.SearchBar
+import com.example.belajar.ui.Screens.JakartaSansMedium
 import com.example.belajar.ui.Screens.appbar.TopAppBarApps
 
 @Composable
@@ -41,11 +43,12 @@ fun ScreenAktivitasUang() {
             .background(color = Color(0xFFF4FDE3))
     ) {
         Column {
+            TopAppBarApps(
+                onBackClick = { /* Handle back click */ },
+                title = "Pemasukan & Pengeluaran"
+            )
             Column(modifier = Modifier.padding(start = 16.dp, end = 16.dp)) {
-                TopAppBarApps(
-                    onBackClick = { /* Handle back click */ },
-                    title = "Tambah Properti"
-                )
+
                 Spacer(modifier = Modifier.height(8.dp))
                 Box(
                     modifier = Modifier.fillMaxWidth(),
@@ -60,9 +63,9 @@ fun ScreenAktivitasUang() {
                         fontFamily = JakartaSansBold
                     )
                 }
-                Spacer(modifier = Modifier.height(8.dp))
+                Spacer(modifier = Modifier.height(10.dp))
                 SearchBar()
-                Spacer(modifier = Modifier.height(8.dp))
+                Spacer(modifier = Modifier.height(10.dp))
                 Row(
                     modifier = Modifier
                         .fillMaxWidth(),
@@ -70,7 +73,7 @@ fun ScreenAktivitasUang() {
                     horizontalArrangement = Arrangement.spacedBy(16.dp) // Jarak antar tombol
                 ) {
                     Button(
-                        onClick = { /* TODO: Handle print action */ },
+                        onClick = { },
                         modifier = Modifier
                             .weight(1f) // Membuat tombol memiliki ukuran yang sama
                             .height(37.dp),
@@ -89,7 +92,7 @@ fun ScreenAktivitasUang() {
                     }
 
                     Button(
-                        onClick = { /* TODO: Handle share action */ },
+                        onClick = { },
                         modifier = Modifier
                             .weight(1f)
                             .height(37.dp),
@@ -108,15 +111,86 @@ fun ScreenAktivitasUang() {
                     }
                 }
 
-//            AktivitasUang(
-//                title = "Sampah Bulanan",
-//                tanggal = "3 Feb 2025",
-//                jam = "12.00",
-//                image = R.drawable.mobil,
-//                nominal = "Rp 30.000",
-//                jenis = "Pengeluaran",
-//                pembayaran = "Tunai"
-//            )
+            }
+            Spacer(modifier = Modifier.height(10.dp))
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .background(Color(0xFFEAECEE), shape = RoundedCornerShape(8.dp)),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(
+                    text = "Bulan Ini",
+                    fontFamily = JakartaSansMedium,
+                    modifier = Modifier.padding(16.dp)
+                )
+
+                Spacer(modifier = Modifier.weight(1f))
+
+                Button(
+                    onClick = { },
+                    colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFF4B860)),
+                    shape = RoundedCornerShape(12.dp),
+                    modifier = Modifier.padding(end = 8.dp)
+                ) {
+                    Text(
+                        text = "Pengeluaran",
+                        fontSize = 16.sp,
+                        color = Color.White
+                    )
+                }
+
+                Button(
+                    onClick = {  },
+                    colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFF4B860)),
+                    shape = RoundedCornerShape(12.dp)
+                ) {
+                    Text(
+                        text = "Pemasukan",
+                        fontSize = 16.sp,
+                        color = Color.White
+                    )
+                }
+            }
+            Spacer(modifier = Modifier.height(10.dp))
+            SelectionContainer(
+                modifier = Modifier.padding(start = 16.dp, end = 16.dp)
+            ) {
+                Column {
+                    AktivitasUang(
+                        title = "Sampah Bulanan",
+                        tanggal = "3 Feb 2025",
+                        jam = "12.00",
+                        image = R.drawable.mobil,
+                        nominal = "Rp 30.000",
+                        jenis = "Pengeluaran",
+                        pembayaran = "Tunai"
+                    )
+                    AktivitasUang(
+                        "Listrik Bulanan",
+                        "12 Nov 2024",
+                        "17.34", R.drawable.lampu,
+                        "Rp 1.500.000",
+                        "Pemasukan",
+                        "Cash"
+                    )
+                }
+            }
+//            SelectionContainer(
+//                modifier = Modifier.padding(start = 16.dp, end = 16.dp)
+//            ) {
+//                AktivitasUang(
+//                    title = "Sampah Bulanan",
+//                    tanggal = "3 Feb 2025",
+//                    jam = "12.00",
+//                    image = R.drawable.mobil,
+//                    nominal = "Rp 30.000",
+//                    jenis = "Pengeluaran",
+//                    pembayaran = "Tunai"
+//                )
+//            }
+
+
 //            AktivitasUang(
 //                "Listrik Bulanan",
 //                "12 Nov 2024",
@@ -125,28 +199,6 @@ fun ScreenAktivitasUang() {
 //                "Pemasukan",
 //                "Cash"
 //            )
-            }
-            SelectionContainer(
-                modifier = Modifier.padding(2.dp)
-            ) {
-                AktivitasUang(
-                    title = "Sampah Bulanan",
-                    tanggal = "3 Feb 2025",
-                    jam = "12.00",
-                    image = R.drawable.mobil,
-                    nominal = "Rp 30.000",
-                    jenis = "Pengeluaran",
-                    pembayaran = "Tunai"
-                )
-            }
-            AktivitasUang(
-                "Listrik Bulanan",
-                "12 Nov 2024",
-                "17.34", R.drawable.lampu,
-                "Rp 1.500.000",
-                "Pemasukan",
-                "Cash"
-            )
         }
 
     }

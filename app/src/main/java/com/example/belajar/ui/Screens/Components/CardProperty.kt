@@ -1,4 +1,4 @@
-package com.example.belajar.ui.Screens
+package com.example.belajar.ui.Screens.Components
 
 
 import androidx.compose.foundation.Image
@@ -30,9 +30,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.belajar.R
+import com.example.belajar.ui.Screens.JakartaSansReguler
 
 @Composable
-fun ScreenProperty(modifier: Modifier) {
+fun CardProperty(modifier: Modifier) {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -121,6 +122,6 @@ fun ScreenProperty(modifier: Modifier) {
 
 @Composable
 @Preview
-fun ScreenPropertyPreview() {
-    ScreenProperty(modifier = Modifier)
+fun CardPropertyPreview() {
+    CardProperty(modifier = Modifier)
 }
