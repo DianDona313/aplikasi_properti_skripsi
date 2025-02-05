@@ -22,8 +22,8 @@ import com.example.belajar.ui.Screens.JakartaSansBold
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun TopAppBarApps(
-    onBackClick: () -> Unit, // Callback untuk tombol back
-    title: String = "Tambah Properti" // Judul dinamis
+    onBackClick: () -> Unit,
+    title: String = "Tambah Properti"
 ) {
     TopAppBar(
         title = {

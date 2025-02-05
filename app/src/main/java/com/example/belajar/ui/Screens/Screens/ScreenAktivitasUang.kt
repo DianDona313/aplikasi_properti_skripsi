@@ -4,21 +4,26 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.selection.SelectionContainer
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowForward
 import androidx.compose.material.icons.filled.Share
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -36,7 +41,7 @@ import com.example.belajar.ui.Screens.JakartaSansMedium
 import com.example.belajar.ui.Screens.appbar.TopAppBarApps
 
 @Composable
-fun ScreenAktivitasUang() {
+fun ScreenAktivitasUang(paddingValues: PaddingValues) {
     Row(
         modifier = Modifier
             .fillMaxSize()
@@ -131,7 +136,7 @@ fun ScreenAktivitasUang() {
                     onClick = { },
                     colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFF4B860)),
                     shape = RoundedCornerShape(12.dp),
-                    modifier = Modifier.padding(end = 8.dp)
+                    modifier = Modifier.padding(end = 12.dp)
                 ) {
                     Text(
                         text = "Pengeluaran",
@@ -141,7 +146,7 @@ fun ScreenAktivitasUang() {
                 }
 
                 Button(
-                    onClick = {  },
+                    onClick = { },
                     colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFF4B860)),
                     shape = RoundedCornerShape(12.dp)
                 ) {
@@ -156,7 +161,7 @@ fun ScreenAktivitasUang() {
             SelectionContainer(
                 modifier = Modifier.padding(start = 16.dp, end = 16.dp)
             ) {
-                Column {
+                Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
                     AktivitasUang(
                         title = "Sampah Bulanan",
                         tanggal = "3 Feb 2025",
@@ -174,38 +179,132 @@ fun ScreenAktivitasUang() {
                         "Pemasukan",
                         "Cash"
                     )
+                    AktivitasUang(
+                        title = "Sampah Bulanan",
+                        tanggal = "3 Feb 2025",
+                        jam = "12.00",
+                        image = R.drawable.mobil,
+                        nominal = "Rp 30.000",
+                        jenis = "Pengeluaran",
+                        pembayaran = "Tunai"
+                    )
+                    AktivitasUang(
+                        "Listrik Bulanan",
+                        "12 Nov 2024",
+                        "17.34", R.drawable.lampu,
+                        "Rp 1.500.000",
+                        "Pemasukan",
+                        "Cash"
+                    )
+                    AktivitasUang(
+                        title = "Sampah Bulanan",
+                        tanggal = "3 Feb 2025",
+                        jam = "12.00",
+                        image = R.drawable.mobil,
+                        nominal = "Rp 30.000",
+                        jenis = "Pengeluaran",
+                        pembayaran = "Tunai"
+                    )
+                    AktivitasUang(
+                        "Listrik Bulanan",
+                        "12 Nov 2024",
+                        "17.34", R.drawable.lampu,
+                        "Rp 1.500.000",
+                        "Pemasukan",
+                        "Cash"
+                    )
+                    AktivitasUang(
+                        title = "Sampah Bulanan",
+                        tanggal = "3 Feb 2025",
+                        jam = "12.00",
+                        image = R.drawable.mobil,
+                        nominal = "Rp 30.000",
+                        jenis = "Pengeluaran",
+                        pembayaran = "Tunai"
+                    )
+                    AktivitasUang(
+                        "Listrik Bulanan",
+                        "12 Nov 2024",
+                        "17.34", R.drawable.lampu,
+                        "Rp 1.500.000",
+                        "Pemasukan",
+                        "Cash"
+                    )
+                    AktivitasUang(
+                        title = "Sampah Bulanan",
+                        tanggal = "3 Feb 2025",
+                        jam = "12.00",
+                        image = R.drawable.mobil,
+                        nominal = "Rp 30.000",
+                        jenis = "Pengeluaran",
+                        pembayaran = "Tunai"
+                    )
+                    AktivitasUang(
+                        "Listrik Bulanan",
+                        "12 Nov 2024",
+                        "17.34", R.drawable.lampu,
+                        "Rp 1.500.000",
+                        "Pemasukan",
+                        "Cash"
+                    )
+                    AktivitasUang(
+                        title = "Dian Dona Adelia",
+                        tanggal = "3 Feb 2025",
+                        jam = "12.00",
+                        image = R.drawable.mobil,
+                        nominal = "Rp 30.000",
+                        jenis = "Pengeluaran",
+                        pembayaran = "Tunai"
+                    )
+                    AktivitasUang(
+                        "Listrik Bulanan",
+                        "12 Nov 2024",
+                        "17.34", R.drawable.lampu,
+                        "Rp 1.500.000",
+                        "Pemasukan",
+                        "Cash"
+                    )
                 }
             }
-//            SelectionContainer(
-//                modifier = Modifier.padding(start = 16.dp, end = 16.dp)
-//            ) {
-//                AktivitasUang(
-//                    title = "Sampah Bulanan",
-//                    tanggal = "3 Feb 2025",
-//                    jam = "12.00",
-//                    image = R.drawable.mobil,
-//                    nominal = "Rp 30.000",
-//                    jenis = "Pengeluaran",
-//                    pembayaran = "Tunai"
-//                )
-//            }
-
-
-//            AktivitasUang(
-//                "Listrik Bulanan",
-//                "12 Nov 2024",
-//                "17.34", R.drawable.lampu,
-//                "Rp 1.500.000",
-//                "Pemasukan",
-//                "Cash"
-//            )
         }
 
     }
 }
 
 @Composable
+fun ButtonBeranda() {
+    Box (modifier = Modifier.fillMaxWidth()
+        .background(color = Color(0xFFF4FDE3)))
+        {
+        Button(
+            onClick = { },
+            colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFF4B860)),
+            shape = RoundedCornerShape(6.dp),
+            modifier = Modifier
+                .padding(16.dp)
+                .fillMaxWidth()
+                .height(36.dp)
+        ) {
+            Text(
+                text = "Beranda",
+                fontSize = 16.sp,
+                color = Color.White
+            )
+        }
+    }
+}
+
+@Composable
+fun MainHomePageScreeen() {
+    Scaffold(
+        bottomBar = { ButtonBeranda() }
+    ) { paddingValues ->
+        ScreenAktivitasUang(paddingValues)
+    }
+}
+
+@Composable
 @Preview
 fun ScreenAktivitasUangPreview() {
-    ScreenAktivitasUang()
+    MainHomePageScreeen()
 }

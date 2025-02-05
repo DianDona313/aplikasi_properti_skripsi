@@ -130,7 +130,7 @@ fun InfoItem(icon: ImageVector, title: String, value: String, color: Color) {
 @Composable
 fun ActionButton(text: String, backgroundColor: Color) {
     Button (
-        onClick = { /* Tambahkan aksi */ },
+        onClick = { },
         colors = ButtonDefaults.buttonColors(containerColor = backgroundColor),
         shape = RoundedCornerShape(8.dp),
         modifier = Modifier.padding(horizontal = 4.dp)
