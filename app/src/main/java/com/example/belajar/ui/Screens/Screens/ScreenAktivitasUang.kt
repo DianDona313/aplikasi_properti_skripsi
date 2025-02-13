@@ -7,7 +7,6 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -36,7 +35,7 @@ import androidx.compose.ui.unit.sp
 import com.example.belajar.R
 import com.example.belajar.ui.Screens.Components.AktivitasUang
 import com.example.belajar.ui.Screens.JakartaSansBold
-import com.example.belajar.ui.Screens.Components.SearchBar
+import com.example.belajar.ui.Screens.appbar.SearchBar
 import com.example.belajar.ui.Screens.JakartaSansMedium
 import com.example.belajar.ui.Screens.appbar.TopAppBarApps
 
@@ -272,7 +271,7 @@ fun ScreenAktivitasUang(paddingValues: PaddingValues) {
 }
 
 @Composable
-fun ButtonBeranda() {
+fun ButtonBerandaYellow() {
     Box (modifier = Modifier.fillMaxWidth()
         .background(color = Color(0xFFF4FDE3)))
         {
@@ -297,7 +296,7 @@ fun ButtonBeranda() {
 @Composable
 fun MainHomePageScreeen() {
     Scaffold(
-        bottomBar = { ButtonBeranda() }
+        bottomBar = { ButtonBerandaYellow() }
     ) { paddingValues ->
         ScreenAktivitasUang(paddingValues)
     }

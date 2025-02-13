@@ -36,16 +36,14 @@ import com.example.belajar.ui.Screens.JakartaSansReguler
 fun CardPemasukanPengeluaran(){
     Column(
         modifier = Modifier
-            .fillMaxSize()
-            .padding(10.dp)
+            .padding(4.dp)
             .verticalScroll(rememberScrollState()),
         verticalArrangement = Arrangement.Center
     ) {
         Card(
             modifier = Modifier
                 .fillMaxWidth()
-                .height(150.dp)
-                .padding(top = 5.dp),
+                .height(150.dp),
             colors = CardDefaults.cardColors(
                 containerColor = Color(0xFFFFFFFF)
             ),
@@ -56,7 +54,7 @@ fun CardPemasukanPengeluaran(){
                     contentDescription = "perumahan griya",
                     modifier = Modifier
                         .width(130.dp)
-                        .height(130.dp)
+                        .fillMaxHeight()
                         .clip(RoundedCornerShape(10.dp)),
                     contentScale = ContentScale.Crop
                 )

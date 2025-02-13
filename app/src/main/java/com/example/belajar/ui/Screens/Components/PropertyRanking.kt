@@ -118,5 +118,9 @@ fun PropertyRanking(rankingValue: Int, imageRanking: Int, nama_kost: String, ala
 @Composable
 @Preview
 fun PropertyRankingPreview() {
-    PropertyRanking(2, R.drawable.kost2, "Kost A", "palembang")
+    PropertyRanking(
+        2,
+        R.drawable.kost2,
+        "Kost A",
+        "palembang")
 }

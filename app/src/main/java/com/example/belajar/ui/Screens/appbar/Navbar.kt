@@ -4,18 +4,20 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -28,14 +30,14 @@ class MainActivity : ComponentActivity() {
         setContent {
             BottomNavBar(
                 items = listOf(
-                    "Beranda" to R.drawable.home, // Ganti dengan nama ikon yang sesuai
+                    "Beranda" to R.drawable.home,
                     "Properti" to R.drawable.properti,
                     "Penghuni" to R.drawable.penyewa,
                     "Jadwal" to R.drawable.jadwal,
                     "Statistik" to R.drawable.statistik
                 ),
                 containerColor = Color.White,
-                selectedColor = Color(0xFF398423), // Warna hijau untuk tab aktif
+                selectedColor = Color(0xFF398423),
                 unselectedColor = Color(0xFF828F9B)
             )
         }
@@ -44,47 +46,51 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun BottomNavBar(
-    items: List<Pair<String, Int>>, // Menggunakan resource ID gambar
-    iconSize: androidx.compose.ui.unit.Dp = 24.dp, // Parameter untuk ukuran ikon
+    items: List<Pair<String, Int>>,
+    iconSize: androidx.compose.ui.unit.Dp = 24.dp,
     containerColor: Color = Color.White,
-    selectedColor: Color = Color.Blue,
-    unselectedColor: Color = Color.Gray
+    selectedColor: Color = Color(0xFF398423),
+    unselectedColor: Color = Color.White
 ) {
     var selectedTab by remember { mutableStateOf(0) }
 
     NavigationBar(
-
-        containerColor = containerColor, // Warna latar belakang navbar
+        containerColor = containerColor,
         contentColor = unselectedColor
     ) {
         items.forEachIndexed { index, (title, iconRes) ->
             NavigationBarItem(
                 icon = {
                     Image(
-                        painter = painterResource(id = iconRes), // Menggunakan painterResource untuk ikon
+                        painter = painterResource(id = iconRes),
                         contentDescription = title,
-                        modifier = Modifier.padding(0.dp).size(iconSize)
+                        modifier = Modifier.size(iconSize)
                     )
-                    if (selectedTab == index) {
-                        Divider(
-                            color = selectedColor,
-                            thickness = 3.dp,
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .padding(top = 4.dp)
-                        )
-                    }
                 },
                 label = {
-                    Text(
-                        text = title,
-                        style = TextStyle(
-                            fontSize = 12.sp, // Ubah ukuran teks
-                            fontFamily = JakartaSansSemiBold, // Gunakan font kustom
-                            fontWeight = FontWeight.Bold, // Tebal
-                            color = if (selectedTab == index) selectedColor else unselectedColor
+                    Column (modifier = Modifier){
+                        Text(
+                            text = title,
+                            textAlign = TextAlign.Center,
+                            style = TextStyle(
+                                fontSize = 12.sp,
+                                fontFamily = JakartaSansSemiBold,
+                                fontWeight = FontWeight.Bold,
+                                color = if (selectedTab == index) selectedColor else unselectedColor
+                            )
                         )
-                    )
+                        if (selectedTab == index) {
+                            Divider(
+                                color = selectedColor,
+
+                                thickness = 3.dp,
+                                modifier = Modifier
+                                    .width(50.dp)
+                                    .padding(top = 4.dp)
+                                    .align(Alignment.CenterHorizontally)
+                            )
+                        }
+                    }
                 },
                 selected = selectedTab == index,
                 onClick = { selectedTab = index },
@@ -108,9 +114,9 @@ fun BottomNavbarPreview() {
             "Jadwal" to R.drawable.jadwal,
             "Statistik" to R.drawable.statistik
         ),
-        iconSize = 30.dp, // Ukuran ikon diubah untuk preview
+        iconSize = 30.dp,
         containerColor = Color.White,
-        selectedColor = Color(0xFF398423), // Warna hijau untuk tab aktif
+        selectedColor = Color(0xFF398423),
         unselectedColor = Color(0xFF828F9B)
     )
 }
