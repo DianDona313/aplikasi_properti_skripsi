@@ -10,56 +10,67 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b765d14f-ab9e-465b-bf89-2782d737da85" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/23100" beforeDir="false" afterPath="$PROJECT_DIR$/.tmp.driveupload/23100" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/23102" beforeDir="false" afterPath="$PROJECT_DIR$/.tmp.driveupload/23102" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/23104" beforeDir="false" afterPath="$PROJECT_DIR$/.tmp.driveupload/23104" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/23106" beforeDir="false" afterPath="$PROJECT_DIR$/.tmp.driveupload/23106" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/23108" beforeDir="false" afterPath="$PROJECT_DIR$/.tmp.driveupload/23108" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/23110" beforeDir="false" afterPath="$PROJECT_DIR$/.tmp.driveupload/23110" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/23709" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/23711" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/23721" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/23817" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2981" beforeDir="false" afterPath="$PROJECT_DIR$/.tmp.driveupload/2981" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2985" beforeDir="false" afterPath="$PROJECT_DIR$/.tmp.driveupload/2985" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2997" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/3009" beforeDir="false" afterPath="$PROJECT_DIR$/.tmp.driveupload/3009" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/3017" beforeDir="false" afterPath="$PROJECT_DIR$/.tmp.driveupload/3017" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/3031" beforeDir="false" afterPath="$PROJECT_DIR$/.tmp.driveupload/3031" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/3037" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/3041" beforeDir="false" afterPath="$PROJECT_DIR$/.tmp.driveupload/3041" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/3047" beforeDir="false" afterPath="$PROJECT_DIR$/.tmp.driveupload/3047" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/3049" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/3065" beforeDir="false" afterPath="$PROJECT_DIR$/.tmp.driveupload/3065" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/3067" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/3075" beforeDir="false" afterPath="$PROJECT_DIR$/.tmp.driveupload/3075" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/3081" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/3107" beforeDir="false" afterPath="$PROJECT_DIR$/.tmp.driveupload/3107" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/arrowcircleright.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/23100" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/23102" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/23104" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/23106" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/23108" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/23110" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/23148" beforeDir="false" afterPath="$PROJECT_DIR$/.tmp.driveupload/23148" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/23663" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/23665" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/24653" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/24655" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/24657" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/24659" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/24687" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/24689" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/24691" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/24693" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/24695" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2597" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/267" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2851" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2909" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2981" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2985" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/3009" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/3017" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/3031" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/3041" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/3047" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/3065" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/3075" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/3107" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.tmp.driveupload/3109" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/3111" beforeDir="false" afterPath="$PROJECT_DIR$/.tmp.driveupload/3111" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/3117" beforeDir="false" afterPath="$PROJECT_DIR$/.tmp.driveupload/3117" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/3111" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/3117" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.tmp.driveupload/3119" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/3121" beforeDir="false" afterPath="$PROJECT_DIR$/.tmp.driveupload/3121" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/3121" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.tmp.driveupload/3125" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/3127" beforeDir="false" afterPath="$PROJECT_DIR$/.tmp.driveupload/3127" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/3129" beforeDir="false" afterPath="$PROJECT_DIR$/.tmp.driveupload/3129" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/3131" beforeDir="false" afterPath="$PROJECT_DIR$/.tmp.driveupload/3131" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/3133" beforeDir="false" afterPath="$PROJECT_DIR$/.tmp.driveupload/3133" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/3139" beforeDir="false" afterPath="$PROJECT_DIR$/.tmp.driveupload/3139" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/3145" beforeDir="false" afterPath="$PROJECT_DIR$/.tmp.driveupload/3145" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/3147" beforeDir="false" afterPath="$PROJECT_DIR$/.tmp.driveupload/3147" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/3127" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/3129" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/3131" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/3133" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/3139" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/3145" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/3147" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.tmp.driveupload/3149" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/3153" beforeDir="false" afterPath="$PROJECT_DIR$/.tmp.driveupload/3153" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/3157" beforeDir="false" afterPath="$PROJECT_DIR$/.tmp.driveupload/3157" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/3165" beforeDir="false" afterPath="$PROJECT_DIR$/.tmp.driveupload/3165" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/3169" beforeDir="false" afterPath="$PROJECT_DIR$/.tmp.driveupload/3169" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/3153" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/3157" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/3165" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/3169" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/3427" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/3433" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.tmp.driveupload/3435" beforeDir="false" afterPath="$PROJECT_DIR$/.tmp.driveupload/3435" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.tmp.driveupload/3437" beforeDir="false" afterPath="$PROJECT_DIR$/.tmp.driveupload/3437" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.tmp.driveupload/3637" beforeDir="false" afterPath="$PROJECT_DIR$/.tmp.driveupload/3637" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.tmp.driveupload/3639" beforeDir="false" afterPath="$PROJECT_DIR$/.tmp.driveupload/3639" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/3647" beforeDir="false" afterPath="$PROJECT_DIR$/.tmp.driveupload/3647" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/3647" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/belajar/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/belajar/MainActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/belajar/ui/Screens/Screens/Home.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/belajar/ui/Screens/Screens/Home.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/belajar/ui/Screens/Screens/ScreenAktivitasUang.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/belajar/ui/Screens/Screens/ScreenAktivitasUang.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +80,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=PhysicalDevice, isTemplate=false, identifier=serial=34240105320005M)]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=C:\Users\hp\.android\avd\Pixel_5_API_29.avd)]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />

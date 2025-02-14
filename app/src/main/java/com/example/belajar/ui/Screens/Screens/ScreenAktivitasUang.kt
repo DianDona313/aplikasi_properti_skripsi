@@ -38,19 +38,17 @@ import com.example.belajar.ui.Screens.JakartaSansBold
 import com.example.belajar.ui.Screens.appbar.SearchBar
 import com.example.belajar.ui.Screens.JakartaSansMedium
 import com.example.belajar.ui.Screens.appbar.TopAppBarApps
+import com.example.belajar.ui.Screens.appbar.TopAppBarProfile
 
 @Composable
 fun ScreenAktivitasUang(paddingValues: PaddingValues) {
     Row(
         modifier = Modifier
             .fillMaxSize()
+            .padding(paddingValues)
             .background(color = Color(0xFFF4FDE3))
     ) {
         Column {
-            TopAppBarApps(
-                onBackClick = { /* Handle back click */ },
-                title = "Pemasukan & Pengeluaran"
-            )
             Column(modifier = Modifier.padding(start = 16.dp, end = 16.dp)) {
 
                 Spacer(modifier = Modifier.height(8.dp))
@@ -79,7 +77,7 @@ fun ScreenAktivitasUang(paddingValues: PaddingValues) {
                     Button(
                         onClick = { },
                         modifier = Modifier
-                            .weight(1f) // Membuat tombol memiliki ukuran yang sama
+                            .weight(1f)
                             .height(37.dp),
                         colors = ButtonDefaults.buttonColors(
                             containerColor = Color(0xFF4A8522)
@@ -294,9 +292,18 @@ fun ButtonBerandaYellow() {
 }
 
 @Composable
-fun MainHomePageScreeen() {
+fun ScreenAktivitasUangBar() {
     Scaffold(
-        bottomBar = { ButtonBerandaYellow() }
+        bottomBar = {
+            ButtonBerandaYellow()
+                    },
+        topBar = {
+            TopAppBarProfile(
+            onBackClick = { },
+            onProfileClick = { },
+            title = "Tambah Properti"
+        )
+        }
     ) { paddingValues ->
         ScreenAktivitasUang(paddingValues)
     }
@@ -305,5 +312,5 @@ fun MainHomePageScreeen() {
 @Composable
 @Preview
 fun ScreenAktivitasUangPreview() {
-    MainHomePageScreeen()
+    ScreenAktivitasUangBar()
 }

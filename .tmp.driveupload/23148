@@ -4,6 +4,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -12,12 +13,13 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.icons.Icons
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.Icon
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -25,44 +27,43 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.belajar.R
-import com.example.belajar.ui.Screens.Components.PropertyRanking
 import com.example.belajar.ui.Screens.JakartaSansBold
+import com.example.belajar.ui.Screens.JakartaSansMedium
 import com.example.belajar.ui.Screens.JakartaSansReguler
 import com.example.belajar.ui.Screens.JakartaSansSemiBold
 import com.example.belajar.ui.Screens.ScreenRanking
 import com.example.belajar.ui.Screens.appbar.TopAppBarProfile
+import com.example.navbar.BottomNavBar
 
 @Composable
-fun Home() {
+fun Home(paddingValues: PaddingValues) {
     Column(
-        modifier = Modifier.fillMaxSize().background(Color.White)
+        modifier = Modifier
+            .fillMaxSize()
+            .background(Color.White)
+            .padding(paddingValues)
+            .verticalScroll(rememberScrollState())
     ) {
-        TopAppBarProfile(
-            onBackClick = { },
-            onProfileClick = { },
-            title = "MyKost"
-        )
-
         Image(
             painter = painterResource(id = R.drawable.perumahangriya),
             contentDescription = "Foto Home",
             contentScale = ContentScale.Crop,
-            modifier = Modifier.fillMaxWidth().height(200.dp)
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(200.dp)
         )
-
-        Row(modifier = Modifier
-            .fillMaxWidth()
-            .padding(horizontal = 16.dp, vertical = 16.dp)
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 16.dp, vertical = 16.dp)
         )
         {
             Column(modifier = Modifier.weight(1f)) {
@@ -89,27 +90,32 @@ fun Home() {
                 )
             }
         }
-        ScreenRanking()
+//        ScreenRanking()
         Row(
             modifier = Modifier
-            .padding(horizontal = 16.dp, vertical = 16.dp),
-        ){
+                .padding(horizontal = 16.dp, vertical = 16.dp),
+        ) {
             Box(
-                modifier = Modifier.clip(CircleShape)
-                    .shadow(20.dp, shape = RoundedCornerShape(12.dp))){
+                modifier = Modifier
+                    .clip(CircleShape)
+                    .shadow(8.dp, shape = CircleShape)
+                    .clip(CircleShape)
+            ) {
                 Image(
                     painter = painterResource(R.drawable.charthome),
                     contentDescription = "Chart Home",
                     contentScale = ContentScale.Crop,
-                    modifier = Modifier.width(170.dp).height(170.dp)
+                    modifier = Modifier
+                        .width(170.dp)
+                        .height(170.dp)
 
                 )
             }
-            Column (
+            Column(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(start = 16.dp)
-            ){
+            ) {
                 Text(
                     "Keuangan Terkini",
                     textAlign = TextAlign.Start,
@@ -144,7 +150,8 @@ fun Home() {
                                 text = "Pemasukkan",
                                 fontSize = 14.sp,
                                 fontFamily = JakartaSansReguler,
-                                color = Color.White)
+                                color = Color.White
+                            )
                             Text(
                                 text = "Rp 1.000.000",
                                 fontFamily = JakartaSansBold,
@@ -179,8 +186,8 @@ fun Home() {
                                 text = "Pengeluaran",
                                 fontSize = 14.sp,
                                 fontFamily = JakartaSansReguler,
-                                color = Color.White)
-                            Spacer(modifier = Modifier.width(4.dp))
+                                color = Color.White
+                            )
                             Text(
                                 text = "Rp 500.000",
                                 fontFamily = JakartaSansBold,
@@ -194,11 +201,103 @@ fun Home() {
 
             }
         }
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 16.dp, vertical = 16.dp)
+        )
+        {
+            Text(
+                "Pemberitahuan",
+                textAlign = TextAlign.Start,
+                fontWeight = FontWeight.Bold,
+                fontSize = 16.sp,
+                fontFamily = JakartaSansSemiBold,
+                lineHeight = 25.sp,
+                modifier = Modifier.width(230.dp)
+            )
+
+            Card(
+                modifier = Modifier
+                    .width(200.dp),
+                shape = RoundedCornerShape(8.dp),
+                elevation = CardDefaults.cardElevation(8.dp),
+                colors = CardDefaults.cardColors(containerColor = Color(0xFFE8EBED))
+
+            ) {
+                Row(
+                    modifier = Modifier
+                        .padding(4.dp)
+                        .width(200.dp)
+                    ,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Image(
+                        painter = painterResource(id = R.drawable.shower),
+                        contentDescription = "Deskripsi Ikon",
+                        modifier = Modifier.size(25.dp)
+                    )
+                    Spacer(modifier = Modifier.width(8.dp))
+                    Column {
+                        Text(
+                            text = "Pengeluaran",
+                            fontSize = 14.sp,
+                            fontFamily = JakartaSansMedium,
+                            color = Color.Black
+                        )
+                        Text(
+                            text = "Rp 500.000",
+                            fontFamily = JakartaSansReguler,
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 14.sp,
+                            color = Color.White
+                        )
+                    }
+                    Image(
+                        painter = painterResource(id = R.drawable.arrowcircleright),
+                        contentDescription = "Deskripsi Ikon",
+                        modifier = Modifier.size(25.dp)
+                    )
+                }
+            }
+        }
     }
 }
+
+
+@Composable
+fun ScreenHome() {
+    Scaffold(
+        bottomBar = {
+            BottomNavBar(
+                items = listOf(
+                    "Beranda" to R.drawable.home,
+                    "Properti" to R.drawable.properti,
+                    "Penghuni" to R.drawable.penyewa,
+                    "Jadwal" to R.drawable.jadwal,
+                    "Statistik" to R.drawable.statistik
+                ),
+                iconSize = 30.dp,
+                containerColor = Color.White,
+                selectedColor = Color(0xFF398423),
+                unselectedColor = Color(0xFF828F9B)
+            )
+        },
+        topBar = {
+            TopAppBarProfile(
+                onBackClick = { },
+                onProfileClick = { },
+                title = "MyKost"
+            )
+        }
+    ) { paddingValues ->
+        Home(paddingValues)
+    }
+}
+
 
 @Preview
 @Composable
 fun HomePreview() {
-    Home()
+    ScreenHome()
 }

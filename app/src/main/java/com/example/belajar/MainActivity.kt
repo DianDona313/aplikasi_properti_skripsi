@@ -8,12 +8,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import com.example.belajar.ui.Screens.Components.CardPenghuni
-import com.example.belajar.ui.Screens.Components.ModalComponents
-import com.example.belajar.ui.Screens.Screens.HalamanPenghuni
 import com.example.belajar.ui.Screens.Screens.Home
-import com.example.belajar.ui.Screens.Screens.MainHomePageScreeen
-import com.example.belajar.ui.Screens.Screens.ScreenAktivitasUang
+import com.example.belajar.ui.Screens.Screens.ScreenHome
 import com.example.belajar.ui.theme.ProjectTheme
 
 class MainActivity : ComponentActivity() {
@@ -26,7 +22,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = Color.LightGray // Tambahkan warna latar belakang
                 ) {
-                    Home()
+                    ScreenHome()
                 }
             }
         }
