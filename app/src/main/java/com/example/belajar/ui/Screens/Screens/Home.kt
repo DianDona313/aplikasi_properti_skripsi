@@ -2,6 +2,7 @@ package com.example.belajar.ui.Screens.Screens
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -13,12 +14,16 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.wrapContentHeight
+import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.FloatingActionButton
+import androidx.compose.material3.Icon
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -34,12 +39,12 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.ui.zIndex
 import com.example.belajar.R
+import com.example.belajar.ui.Screens.Components.CardPemberitahuanHome
 import com.example.belajar.ui.Screens.JakartaSansBold
-import com.example.belajar.ui.Screens.JakartaSansMedium
 import com.example.belajar.ui.Screens.JakartaSansReguler
 import com.example.belajar.ui.Screens.JakartaSansSemiBold
-import com.example.belajar.ui.Screens.ScreenRanking
 import com.example.belajar.ui.Screens.appbar.TopAppBarProfile
 import com.example.navbar.BottomNavBar
 
@@ -90,7 +95,7 @@ fun Home(paddingValues: PaddingValues) {
                 )
             }
         }
-//        ScreenRanking()
+        ScreenRanking()
         Row(
             modifier = Modifier
                 .padding(horizontal = 16.dp, vertical = 16.dp),
@@ -204,7 +209,7 @@ fun Home(paddingValues: PaddingValues) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(horizontal = 16.dp, vertical = 16.dp)
+                .padding(horizontal = 8.dp, vertical = 2.dp)
         )
         {
             Text(
@@ -214,56 +219,27 @@ fun Home(paddingValues: PaddingValues) {
                 fontSize = 16.sp,
                 fontFamily = JakartaSansSemiBold,
                 lineHeight = 25.sp,
-                modifier = Modifier.width(230.dp)
+                modifier = Modifier.fillMaxWidth()
             )
 
-            Card(
-                modifier = Modifier
-                    .width(200.dp),
-                shape = RoundedCornerShape(8.dp),
-                elevation = CardDefaults.cardElevation(8.dp),
-                colors = CardDefaults.cardColors(containerColor = Color(0xFFE8EBED))
-
-            ) {
-                Row(
-                    modifier = Modifier
-                        .padding(4.dp)
-                        .width(200.dp)
-                    ,
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Image(
-                        painter = painterResource(id = R.drawable.shower),
-                        contentDescription = "Deskripsi Ikon",
-                        modifier = Modifier.size(25.dp)
-                    )
-                    Spacer(modifier = Modifier.width(8.dp))
-                    Column {
-                        Text(
-                            text = "Pengeluaran",
-                            fontSize = 14.sp,
-                            fontFamily = JakartaSansMedium,
-                            color = Color.Black
-                        )
-                        Text(
-                            text = "Rp 500.000",
-                            fontFamily = JakartaSansReguler,
-                            fontWeight = FontWeight.Bold,
-                            fontSize = 14.sp,
-                            color = Color.White
-                        )
-                    }
-                    Image(
-                        painter = painterResource(id = R.drawable.arrowcircleright),
-                        contentDescription = "Deskripsi Ikon",
-                        modifier = Modifier.size(25.dp)
-                    )
-                }
+            Row (modifier = Modifier
+                .wrapContentWidth()
+                .horizontalScroll(rememberScrollState())){
+                CardPemberitahuanHome(
+                    "Tagihan Air",
+                    "Rp 234.000"
+                )
+                CardPemberitahuanHome(
+                    "Tagihan Air",
+                    "Rp 234.000"
+                )
             }
+
+
         }
+
     }
 }
-
 
 @Composable
 fun ScreenHome() {
@@ -289,6 +265,22 @@ fun ScreenHome() {
                 onProfileClick = { },
                 title = "MyKost"
             )
+        },
+        floatingActionButton = {
+            FloatingActionButton(
+                onClick = {},
+                shape = RoundedCornerShape(6.dp),
+                containerColor = Color(0xFF398423),
+                modifier = Modifier
+                    .padding(0.dp)
+            ) {
+                Icon(
+                    painter = painterResource(id = R.drawable.buttontambah),
+                    contentDescription = "Tambah",
+                    tint = Color.Unspecified,
+                    modifier = Modifier.size(32.dp)
+                )
+            }
         }
     ) { paddingValues ->
         Home(paddingValues)

@@ -34,6 +34,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.belajar.R
 import com.example.belajar.ui.Screens.Components.AktivitasUang
+import com.example.belajar.ui.Screens.Components.BottomBarYellow
 import com.example.belajar.ui.Screens.JakartaSansBold
 import com.example.belajar.ui.Screens.appbar.SearchBar
 import com.example.belajar.ui.Screens.JakartaSansMedium
@@ -268,34 +269,12 @@ fun ScreenAktivitasUang(paddingValues: PaddingValues) {
     }
 }
 
-@Composable
-fun ButtonBerandaYellow() {
-    Box (modifier = Modifier.fillMaxWidth()
-        .background(color = Color(0xFFF4FDE3)))
-        {
-        Button(
-            onClick = { },
-            colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFF4B860)),
-            shape = RoundedCornerShape(6.dp),
-            modifier = Modifier
-                .padding(16.dp)
-                .fillMaxWidth()
-                .height(36.dp)
-        ) {
-            Text(
-                text = "Beranda",
-                fontSize = 16.sp,
-                color = Color.White
-            )
-        }
-    }
-}
 
 @Composable
 fun ScreenAktivitasUangBar() {
     Scaffold(
         bottomBar = {
-            ButtonBerandaYellow()
+            BottomBarYellow("Beranda")
                     },
         topBar = {
             TopAppBarProfile(
