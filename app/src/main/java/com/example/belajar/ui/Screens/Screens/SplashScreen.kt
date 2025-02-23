@@ -53,7 +53,7 @@ fun SplashScreen() {
         )
         Spacer(modifier = Modifier.height(40.dp))
         ButtonGandaGreen(
-            "MASUK","REGISTRASI"
+            "Masuk","Registrasi"
         )
     }
 }

@@ -1,29 +1,11 @@
 package com.example.belajar.ui.Screens.Screens
 
-import androidx.compose.material3.*
-import androidx.compose.foundation.background
-
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Send
-import androidx.compose.material3.FilledTonalButton
-import androidx.compose.material3.Icon
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -31,114 +13,160 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.wear.compose.material.Text
+import com.example.belajar.ui.Screens.Components.BottomBarGreen
+import com.example.belajar.ui.Screens.appbar.TopAppBarApps
+import androidx.compose.material3.OutlinedTextField
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.input.VisualTransformation
+import androidx.compose.ui.text.input.PasswordVisualTransformation
+import com.example.belajar.ui.Screens.JakartaSansMedium
+import com.example.belajar.ui.Screens.JakartaSansReguler
 
 @Composable
-fun Registrasi() {
-    var nama_product by remember { mutableStateOf("") }
-    var stock by remember { mutableStateOf("") }
-    var harga by remember { mutableStateOf("") }
-    var expired_date by remember { mutableStateOf("") }
+fun Registrasi(paddingValues: PaddingValues) {
+    var fullName by remember { mutableStateOf("") }
+    var username by remember { mutableStateOf("") }
+    var phoneNumber by remember { mutableStateOf("") }
+    var email by remember { mutableStateOf("") }
+    var address by remember { mutableStateOf("") }
+    var password by remember { mutableStateOf("") }
+    var confirmPassword by remember { mutableStateOf("") }
+    var agreePrivacy by remember { mutableStateOf(false) }
+    var agreeInfo by remember { mutableStateOf(false) }
 
-    Column(modifier = Modifier
-        .fillMaxSize()
-        .background(color = Color.White)) {
-        Column(
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(paddingValues)
+            .padding(16.dp)
+            .verticalScroll(rememberScrollState()),
+        verticalArrangement = Arrangement.spacedBy(8.dp)
+    ) {
+        InputField(
+            label = "Nama lengkap",
+            value = fullName,
+            onValueChange = { fullName = it })
+        InputField(
+            label = "Username",
+            value = username,
+            onValueChange = { username = it })
+        InputField(
+            label = "Nomor handphone",
+            value = phoneNumber,
+            onValueChange = { phoneNumber = it })
+        InputField(
+            label = "Email",
+            value = email,
+            onValueChange = { email = it })
+        Text(
+            text = "Alamat lengkap (opsional)",
+            fontSize = 14.sp,
+            fontWeight = FontWeight.Medium
+        )
+        OutlinedTextField(
+            value = address,
+            onValueChange = { address = it },
             modifier = Modifier
-                .fillMaxSize()
-                .padding(horizontal = 16.dp)
-                .background(color = Color.White)
-                .verticalScroll(rememberScrollState()),
-            verticalArrangement = Arrangement.Center
-//        horizontalAlignment = Alignment.CenterHorizontally
-        ) {
-            Text(text = "Create Product", fontWeight = FontWeight.Bold, color = Color.Black)
-            Spacer(modifier = Modifier.padding(10.dp))
-            OutlinedTextField(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(35.dp),
-                value = nama_product,
-                shape = RoundedCornerShape(6.dp),
-                onValueChange = { nama_product = it },
-                label = {
-                    Text(
-                        "Nama Product",
-                        fontWeight = FontWeight.Bold,
-                        color = Color.Black,
-                        fontSize = 12.sp
-                    )
-                },
-                placeholder = { Text("Masukkan Nama Products") }
-            )
-            Spacer(modifier = Modifier.padding(10.dp))
-            OutlinedTextField(
-                value = stock,
-                shape = RoundedCornerShape(12.dp),
-                onValueChange = { stock = it },
-                label = {
-                    Text(
-                        "Stock Product",
-                        fontWeight = FontWeight.Bold,
-                        color = Color.Black
-                    )
-                },
-                placeholder = { Text("Masukkan Jumlah Stock Products") }
-            )
-            Spacer(modifier = Modifier.padding(10.dp))
-            OutlinedTextField(
-                value = harga,
-                shape = RoundedCornerShape(12.dp),
-                onValueChange = { harga = it },
-                label = {
-                    Text(
-                        "Harga Product",
-                        fontWeight = FontWeight.Bold,
-                        color = Color.Black
-                    )
-                },
-                placeholder = { Text("Masukkan Harga Products") }
-            )
-            Spacer(modifier = Modifier.padding(10.dp))
-            OutlinedTextField(
-                value = expired_date,
-                shape = RoundedCornerShape(12.dp),
-                onValueChange = { expired_date = it },
-                label = {
-                    Text(
-                        "Expired Date Product",
-                        fontWeight = FontWeight.Bold,
-                        color = Color.Black
-                    )
-                },
-                placeholder = { Text("Masukkan Expired Date Products") }
-            )
-            Spacer(modifier = Modifier.padding(10.dp))
-            Row(
-                modifier = Modifier.width(300.dp),
-                horizontalArrangement = Arrangement.Center
-            ) {
-                FilledTonalButton(
-                    modifier = Modifier.fillMaxSize(),
-                    shape = RoundedCornerShape(12.dp),
-                    onClick = {}) {
-                    Icon(
-                        imageVector = Icons.Default.Send,
-                        contentDescription = "Submit Icon",
-                        tint = Color.Magenta
-                    )
-                    Spacer(modifier = Modifier.padding(4.dp))
-                    Text("Submit", color = Color.Magenta)
-                }
-            }
+                .fillMaxWidth()
+                .height(90.dp),
+            shape = RoundedCornerShape(6.dp),
+            placeholder = { Text("Masukkan alamat anda") },
+            maxLines = 3
+        )
 
+        InputField(
+            label = "Kata sandi",
+            value = password,
+            onValueChange = { password = it },
+            isPassword = true
+        )
+        InputField(
+            label = "Konfirmasi kata sandi",
+            value = confirmPassword,
+            onValueChange = { confirmPassword = it },
+            isPassword = true
+        )
+
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Checkbox(checked = agreePrivacy, onCheckedChange = { agreePrivacy = it })
+            Text(
+                text = "Saya setuju mengenai seluruh kebijakan privasi",
+                modifier = Modifier.padding(start = 8.dp)
+            )
+        }
+
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Checkbox(checked = agreeInfo, onCheckedChange = { agreeInfo = it })
+            Text(
+                text = "Saya setuju untuk menerima seluruh rangkaian kegiatan informasi",
+                modifier = Modifier.padding(start = 8.dp)
+            )
         }
     }
 }
 
-
-@Preview
 @Composable
-fun RegistrasiPreview() {
-    Registrasi()
+fun InputField(
+    label: String,
+    value: String,
+    onValueChange: (String) -> Unit,
+    isPassword: Boolean = false
+) {
+    Text(
+        text = label,
+        fontSize = 14.sp,
+        fontWeight = FontWeight.Medium,
+        fontStyle = JakartaSansMedium,
+        modifier = Modifier.padding(bottom = 2.dp)
+        
+    )
+    OutlinedTextField(
+        value = value,
+        onValueChange = onValueChange,
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(48.dp), // Sesuaikan tinggi agar lebih rapat
+        shape = RoundedCornerShape(4.dp), // Kurangi radius sudut
+        placeholder = {
+            Text(
+                "Masukkan $label anda",
+                fontSize = 14.sp,
+                fontFamily = JakartaSansReguler
+            )
+        },
+        visualTransformation = if (isPassword) PasswordVisualTransformation() else VisualTransformation.None,
+        singleLine = true,
+
+        textStyle = TextStyle(fontSize = 14.sp), // Ukuran teks lebih kecil agar pas
+        colors = TextFieldDefaults.colors(
+            focusedContainerColor = Color.Transparent,
+            unfocusedContainerColor = Color.Transparent,
+            focusedIndicatorColor = Color.Blue,
+            unfocusedIndicatorColor = Color.Gray,
+            cursorColor = Color.Black
+        )
+    )
+}
+
+@Composable
+fun ScreenRegistrasi() {
+    Scaffold(
+        bottomBar = {
+            BottomBarGreen("Registrasi")
+        },
+        topBar = {
+            TopAppBarApps(
+                onBackClick = { },
+                title = "Refistrasi"
+            )
+        }
+    ) { paddingValues ->
+        Registrasi(paddingValues)
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun ScreenRegistrasiPreview() {
+    ScreenRegistrasi()
 }
